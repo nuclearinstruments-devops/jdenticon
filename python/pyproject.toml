@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jdenticon"
+version = "0.1.0"
+description = "Python library for generating highly recognizable identicons"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Daniel Mester Pirttijärvi (Original JS)"},
+]
+keywords = ["identicon", "avatar", "icon", "generator", "jdenticon"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Graphics",
+]
+requires-python = ">=3.6"
+
+[project.optional-dependencies]
+png = ["Pillow>=8.0.0"]
+
+[project.scripts]
+jdenticon = "jdenticon.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/dmester/jdenticon"
+Documentation = "https://jdenticon.com"
+Repository = "https://github.com/dmester/jdenticon"
