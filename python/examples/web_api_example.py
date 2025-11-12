@@ -179,8 +179,14 @@ svg_content = response.text</pre>
         print()
         print("Press Ctrl+C to stop")
         print("=" * 60)
+        print()
+        print("Note: This is a demo. For production use:")
+        print("  - Remove debug=True")
+        print("  - Use a production WSGI server (gunicorn, uwsgi)")
+        print("  - Add caching and rate limiting")
+        print()
         
-        app.run(debug=True, port=5000)
+        app.run(debug=False, port=5000)
 
 except ImportError as e:
     print("=" * 60)
